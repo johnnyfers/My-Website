@@ -21,6 +21,14 @@ class Author(models.Model):
         return self.get_full_name()
 
 
+class Skill(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    type = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='skills', null=True)
+
+    def __str__(self):
+        return self.name
+
 class Post(models.Model):
     title = models.CharField(max_length=150)
     excerpt = models.CharField(max_length=250)
@@ -28,6 +36,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now=True)
     slug = models.SlugField(unique=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
+    skills = models.ManyToManyField(Skill, null=True, related_name='posts')
 
     author = models.ForeignKey(
         Author, on_delete=models.SET_NULL, null=True, related_name='posts')
