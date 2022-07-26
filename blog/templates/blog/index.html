@@ -8,6 +8,7 @@ johnny's
 {% block css_files %}
   <script src="{% static "blog/skill.js" %}"></script>
   <link rel="stylesheet" href="{% static "blog/skill.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/contacts.css" %}" />
   <link rel="stylesheet" href="{% static "blog/post.css" %}" />
   <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock %}
@@ -63,6 +64,38 @@ johnny's
 
 <br><br><br><br><br>
 
+<section id="contacts">
+  <ul>
+    <li>
+      <a class="linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/johnnyfers/" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img width="25" aria-hidden="true" alt="linkedin" src="{% static "blog/images/Linkedin-Icon.png" %}"></img>
+      </a>
+    </li>
+    <li>
+      <a class="github"  target="_blank" rel="noopener noreferrer" href="https://github.com/johnnyfers">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img width="25" aria-hidden="true" alt="github" src="{% static "blog/images/icone-github-grise.png" %}"></img>
+      </a>
+    </li>
+    <li>
+      <a class="outlook" href="mailto:joaovlima07@hotmail.com">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img width="25" aria-hidden="true" alt="outlook" src="{% static "blog/images/mail.png" %}"></img>
+      </a>
+    </li>
+  </ul>
+  </section>
+
 <section id="about">
   <h2>What I Do</h2>
   <p>
@@ -74,4 +107,5 @@ johnny's
     the same, I'd be very happy!
   </p>
 </section>
+
 {% endblock %}

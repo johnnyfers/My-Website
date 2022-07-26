@@ -15,7 +15,7 @@
 .repo a:hover,
 .repo a:active {
   transform: scale(1.1);
-  background-color: #cc1e29;
+  background-color: #5b39d6;
   color: white;
 }
 

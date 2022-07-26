@@ -61,17 +61,17 @@
 #about {
   text-align: center;
   padding: 3rem;
-  background: linear-gradient(to right top, #c52323, #be363f);
+  background: linear-gradient(to right top, #5b39d6, #5b39d6);
   margin-top: 5rem;
 }
 
 #about h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #f5f5f5;
 }
 
 #about p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #f5f5f5;
 }
 
@@ -106,6 +106,7 @@
   gap: 1em;
   scrollbar-width: none;
 }
+
 .arrows {
   width: 20px;
   height: 45px;
@@ -173,11 +174,11 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+input:checked+label {
   background: #ef8354;
 }
 
-input:checked + label:after {
+input:checked+label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
@@ -186,11 +187,11 @@ label:active:after {
   width: 20px;
 }
 
-input:checked + label #off {
+input:checked+label #off {
   display: none;
 }
 
-:not(input:checked) + label #on {
+:not(input:checked)+label #on {
   display: none;
 }
 
@@ -241,6 +242,7 @@ input:checked + label #off {
     overflow-x: auto;
     scrollbar-width: thin;
   }
+
   .carousel-wrapper ::-webkit-scrollbar {
     height: 6px;
   }
