@@ -1,6 +1,5 @@
-from datetime import date
 from django.shortcuts import get_object_or_404, render
-from .models import Post
+from .models import Post, Skill
 
 
 def get_date(post):
@@ -9,9 +8,11 @@ def get_date(post):
 
 def starting_page(request):
     latest_posts = Post.objects.all().order_by('-date')[:3]
+    skills = Skill.objects.all()
 
     return render(request, 'blog/index.html', {
-        'posts': latest_posts
+        'posts': latest_posts,
+        'skills': skills
     })
 
 
