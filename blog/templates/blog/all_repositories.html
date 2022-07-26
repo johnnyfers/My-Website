@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+All My Repositories
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/repository.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/all-posts.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-posts">
+  <h2>My Collected Repositories</h2>
+
+  <ul>
+    {% for repo in repositories %}
+      {% include "blog/includes/repository.html" %}
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

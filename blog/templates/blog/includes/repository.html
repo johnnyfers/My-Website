@@ -1,0 +1,22 @@
+{% load static %}
+
+<li>
+    <article class="repo">
+      <a href="{{repo.url}}">
+        {% if repo.language_image %}
+            <img src="{{ repo.language_image.image.url }}" alt="{{repo.language}}"
+        {% else %}
+            <img src="{% static "blog/images/generic-language.jpg" %}" alt="{{repo.language}}"
+        {% endif %}
+        />
+        <div class="repo__content">
+          <h3>{{ repo.name | title}}</h3>
+        {% if repo.description %}
+          <p>
+            {{ repo.description }}
+          </p>
+        {% endif %}
+        </div>
+      </a>
+    </article>
+  </li>
