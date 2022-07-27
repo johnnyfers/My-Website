@@ -10,7 +10,6 @@ def get_date(post):
 def starting_page(request):
     latest_posts = Post.objects.all().order_by('-date')[:3]
     skills = Skill.objects.all()
-
     return render(request, 'blog/index.html', {
         'posts': latest_posts,
         'skills': skills
@@ -26,7 +25,6 @@ def posts(request):
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-
     return render(request, 'blog/post_detail.html', {
         'post': post,
         'tags': post.tags.all()
