@@ -36,7 +36,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now=True)
     slug = models.SlugField(unique=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
-    skills = models.ManyToManyField(Skill, null=True, related_name='posts')
+    skills = models.ManyToManyField(Skill, blank=True, related_name='posts')
 
     author = models.ForeignKey(
         Author, on_delete=models.SET_NULL, null=True, related_name='posts')
